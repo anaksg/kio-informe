@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Informe - Centro de Datos KIO Networks Querétaro</title>
+  <style>
+    :root{
+      --accent:#2b7a78;
+      --muted:#6b6b6b;
+      --bg:#f7f7f8;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:var(--bg);
+      color:#222;
+      line-height:1.45;
+    }
+    header{
+      background:linear-gradient(90deg,#eef7f6,white);
+      padding:28px 20px;
+      border-bottom:1px solid #e6e6e6;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:28px;color:var(--accent)}
+    header p{margin:6px 0 0;color:var(--muted)}
+    .container{max-width:1000px;margin:28px auto;padding:0 16px}
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      margin:18px 0;
+      box-shadow:0 6px 18px rgba(38,38,38,0.04);
+    }
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media(max-width:880px){.grid-2{grid-template-columns:1fr}}
+    dl{display:grid;grid-template-columns:120px 1fr;gap:8px 12px;margin:0}
+    dt{font-weight:700;color:#333}
+    dd{margin:0;color:#333}
+    ul{margin:8px 0 0 18px}
+    ol{margin:8px 0 0 18px}
+    .tag{display:inline-block;background:#eef6f6;color:#08514a;padding:6px 10px;border-radius:999px;font-size:12px;margin-bottom:8px}
+    a{color:var(--accent)}
+    /* Map */
+    .map-wrap{border-radius:10px;overflow:hidden;border:1px solid #e6e6e6}
+    .map-wrap iframe{width:100%;height:420px;border:0;display:block}
+    /* Imagen galería */
+    .gallery img { max-width:100%; height:auto; border-radius:10px; display:block; margin:0 auto; }
+    /* Chatbot */
+    #chatbox{border:1px solid #ccc; border-radius:10px; padding:10px; height:300px; overflow-y:auto; background:#fefefe; display:flex; flex-direction:column;}
+    #userInput{width:80%; padding:8px; border-radius:5px; border:1px solid #ccc;}
+    #sendBtn{padding:8px 12px; border-radius:5px; background:var(--accent); color:white; border:none; cursor:pointer;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Informe — Centro de Datos KIO Networks (Querétaro)</h1>
+  </header>
+
+  <main class="container">
+    <!-- DATOS BÁSICOS -->
+    <section class="card">
+      <h2>Datos básicos</h2>
+      <div class="grid-2">
+        <div>
+          <dl>
+            <dt>Nombre</dt><dd>KIO Networks — Data Center Querétaro (KIO QRO)</dd>
+            <dt>Ubicación</dt><dd>Parque Industrial / Querétaro, México — ver mapa abajo</dd>
+            <dt>Tipo</dt><dd>Privado (operador comercial de colocation y nube)</dd>
+            <dt>Funciones principales</dt>
+            <dd>
+              <ul>
+                <li>Colocation (rack, cages), colocación de infraestructura crítica.</li>
+                <li>Servicios gestionados: hosting, cloud híbrida, DRaaS (recuperación ante desastres).</li>
+                <li>Conectividad: peering, enlaces MPLS/Internet de alta capacidad.</li>
+                <li>Soporta clientes: banca, telecomunicaciones, empresas de TI, gobierno y educación.</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <aside>
+          <p class="tag">Prioridad: Crítica</p>
+          <p class="small">KIO es uno de los operadores más grandes en LATAM; sus centros en México cuentan con certificaciones internacionales (Tier IV en algunos campus).</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN + MAPA -->
+    <section class="card">
+      <h2>Ubicación</h2>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4442.296505276407!2d-100.25595051314446!3d20.56717087014985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d36826c8bc7c77%3A0xa3bd04838f9f6c39!2sKIO%20Networks%20QRO%201!5e0!3m2!1ses!2smx!4v1760998407026!5m2!1ses!2smx" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="small" style="margin-top:10px"></p>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="card">
+      <h2>Galería (Centro de Datos)</h2>
+      <div class="gallery">
+        <img src="./image1.png" alt="Fachada del centro de datos KIO Querétaro">
+      </div>
+      <p class="small" style="margin-top:8px;">Fachada del centro de datos KIO Networks en Querétaro.</p>
+    </section>
+
+    <!-- INFRAESTRUCTURA TECNOLÓGICA -->
+    <section class="card">
+      <h2>Infraestructura tecnológica</h2>
+      <h3>Servidores y almacenamiento</h3>
+      <ul>
+        <li>Servidores rack y blade — equipos comunes: Dell EMC, HPE, Lenovo.</li>
+        <li>Almacenamiento: arrays SAN/NAS, all-flash para cargas críticas y replicación entre sitios.</li>
+        <li>Política de backups: backups programados, snapshots y replicación a sitio remoto (DR).</li>
+      </ul>
+
+      <h3>Redes</h3>
+      <ul>
+        <li>Topología con múltiples anillos redundantes.</li>
+        <li>Equipos Cisco, Juniper, Arista.</li>
+        <li>Conectividad: enlaces a carriers nacionales e internacionales, peering con IXPs.</li>
+      </ul>
+
+      <h3>Virtualización / Cloud</h3>
+      <ul>
+        <li>Hypervisors: VMware, KVM; plataformas de cloud privada: OpenStack.</li>
+        <li>Nube híbrida integrable con AWS y Azure.</li>
+      </ul>
+    </section>
+
+    <!-- INFRAESTRUCTURA FÍSICA -->
+    <section class="card">
+      <h2>Infraestructura física</h2>
+      <ul>
+        <li>Capacidad de racks: variable (10–30 kW/rack).</li>
+        <li>Climatización: CRAC units, free cooling, control de temperatura y humedad por zonas.</li>
+        <li>Energía: UPS redundantes y generadores diésel con autonomía.</li>
+        <li>Seguridad física: tarjetas y biometría, torniquetes, CCTV 24/7.</li>
+      </ul>
+      <h3>Redundancia y SLA</h3>
+      <ul>
+        <li>Arquitectura eléctrica y de enfriamiento redundante (N+1, 2N, 2N+1).</li>
+        <li>SLA comerciales: disponibilidad >99.99%; estrategias de DR y replicación.</li>
+      </ul>
+    </section>
+
+    <!-- SEGURIDAD DE LA INFORMACIÓN -->
+    <section class="card">
+      <h2>Seguridad de la información</h2>
+      <ul>
+        <li>Controles de acceso: MFA, jump servers, DMZ.</li>
+        <li>Cifrado: TLS en tránsito, AES-256 en reposo.</li>
+        <li>Monitorización: SOC/NOC, SIEM, IDS/IPS, 24/7.</li>
+        <li>Backup y continuidad: políticas RTO/RPO, pruebas periódicas de DR.</li>
+      </ul>
+    </section>
+
+    <!-- NORMATIVAS Y ESTÁNDARES -->
+    <section class="card">
+      <h2>Normativas y estándares</h2>
+      <ul>
+        <li>TIA-942 (Tier IV en algunos campus).</li>
+        <li>ISO/IEC: 27001, 20000, 9001, 50001.</li>
+        <li>Buenas prácticas: ITIL, NIST, MoProSoft.</li>
+      </ul>
+    </section>
+
+    <!-- PERSONAL -->
+    <section class="card">
+      <h2>Personal y roles clave</h2>
+      <ul>
+        <li>NOC Operators 24/7.</li>
+        <li>Ingenieros de redes, storage, sistemas, virtualización.</li>
+        <li>Equipo de Facilities: técnicos eléctricos, HVAC, generadores.</li>
+        <li>Seguridad y cumplimiento: oficiales de seguridad, auditoría y continuidad.</li>
+      </ul>
+    </section>
+
+    <!-- EFICIENCIA ENERGÉTICA -->
+    <section class="card">
+      <h2>Eficiencia energética y sustentabilidad</h2>
+      <ul>
+        <li>Métricas: PUE <1.5 en centros modernos.</li>
+        <li>Free cooling, economizadores, iluminación LED, monitoreo DCIM.</li>
+        <li>Políticas verdes: energía renovable, reciclaje de e-waste.</li>
+      </ul>
+    </section>
+
+    <!-- RETOS -->
+    <section class="card">
+      <h2>Retos y problemas comunes</h2>
+      <ul>
+        <li>Aumento de costos energéticos.</li>
+        <li>Obsolescencia del hardware.</li>
+        <li>Seguridad física y cibernética.</li>
+        <li>Escalabilidad y demanda de conectividad.</li>
+      </ul>
+    </section>
+
+    <!-- PROPUESTA DE MEJORA -->
+    <section class="card">
+      <h2>Propuesta de mejora (simulada)</h2>
+      <ol>
+        <li>Instalar medidores y sensores IoT por rack para métricas en tiempo real.</li>
+        <li>Implementar DCIM que integre consumo, climatización y alertas.</li>
+        <li>Usar IA para predecir hotspots, consumo y mantenimiento preventivo.</li>
+        <li>Actualizar UPS/convertidores a modelos más eficientes.</li>
+      </ol>
+      <p>Impacto estimado: reducción del consumo 10–20% y menor tasa de incidentes.</p>
+    </section>
+
+    <!-- REFERENCIAS -->
+    <section class="card">
+      <h2>Referencias / Fuentes</h2>
+      <ul>
+        <li><a href="https://www.kionetworks.com/" target="_blank" rel="noopener">Sitio oficial KIO Networks</a></li>
+        <li>Uptime Institute — certificaciones Tier.</li>
+        <li>Artículos y notas de prensa sobre KIO (2020–2024).</li>
+      </ul>
+    </section>
+
+    <!-- CHATBOT -->
+    <section class="card">
+      <h2>Chatbot</h2>
+      <div id="chatbox"></div>
+      <div style="margin-top:8px; display:flex; gap:8px;">
+        <input type="text" id="userInput" placeholder="Escribe algo...">
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Chatbot simple
+    const chatbox = document.getElementById('chatbox');
+    const input = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    const responses = {
+      "hola": "¡Hola! ¿Cómo estás?",
+      "que es kio": "KIO Networks es un operador de centros de datos y servicios en la nube en México.",
+      "gracias": "¡De nada! 😊",
+      "adios": "¡Hasta luego!"
+    };
+
+    function addMessage(sender, text) {
+      const msg = document.createElement('div');
+      msg.style.margin="6px 0";
+      msg.style.padding="6px 10px";
+      msg.style.borderRadius="8px";
+      msg.style.maxWidth="80%";
+      if(sender==="user") {
+        msg.style.background="#d1f7ff";
+        msg.style.alignSelf="flex-end";
+        msg.style.marginLeft="auto";
+      } else {
+        msg.style.background="#e0e0e0";
+        msg.style.alignSelf="flex-start";
+      }
+      msg.textContent = text;
+      chatbox.appendChild(msg);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function sendMessage() {
+      const text = input.value.trim();
+      if(!text) return;
+      addMessage("user", text);
+      const key = text.toLowerCase();
+      const reply = responses[key] || "Lo siento, no entiendo eso.";
+      setTimeout(()=> addMessage("bot", reply), 500);
+      input.value = "";
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keypress', e=> { if(e.key==="Enter") sendMessage(); });
+  </script>
+</body>
+</html>
